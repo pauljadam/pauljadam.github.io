@@ -6,3 +6,5 @@ img {max-width: 500px;}
 figure, figcaption {text-align: center;}
 .do {color: green;}
 .dont {color: darkred;}
+.dodont {float:left; min-width: 50%;}
+.clearboth {clear: both;}
