@@ -1,1 +1,8 @@
 body {font-family: sans-serif;}
+img {max-width: 500px;}
+@media only screen and (max-width: 600px) {
+    img {max-width: 100%;}
+}
+figure, figcaption {text-align: center;}
+.do {color: green;}
+.dont {color: darkred;}
