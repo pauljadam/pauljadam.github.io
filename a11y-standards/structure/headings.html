@@ -21,37 +21,52 @@
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Annotate your designs to identify heading text and heading level.</li>
+        <li>Annotate headings as one level below their parent heading.</li>
     </ul>
     <details>
         <summary>Good Design Example</summary>
+        <p>Screenshot from the figma example.</p>
     </details>
 </div>
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't create designs without annotating the heading text and heading level.</li>
+        <li>Don't design headings that skip levels, i.e. don't use H1 > H3.</li>
     </ul>
     <details>
         <summary>Bad Design Example</summary>
+        <p>Screenshot from the figma example.</p>
     </details>
 </div>
 <div class="clearboth"></div>
 <h4>Live Figma Example</h4>
+<p>Link to Figma example</p>
 <h4>Testing for Accessibility</h4>
 <details>
     <summary>Design Review</summary>
     <ol>
         <li>Look for heading and subheading text in the design.</li>
+        <li>Make sure heading and subheading text is annotated in the design.</li>
+        <li>Make sure headings do not skip levels.</li>
+        <li>If heading and subheading text is properly annotated in the design then it passes. ✅</li>
+        <li>If heading or subheading text is not annotated in the design then it fails. ❌</li>
+        <li>If headings do not skip levels then it passes. ✅</li>
+        <li>If headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <h2>Content Designers</h2>
 <h3>Write meaningful heading text and markup as heading elements one level below their parent heading.</h3>
-<p>Rule explanation.</p>
+<p>Heading text must be meaningful and describe the content below the heading. Don't choose heading levels based on the size of the heading, instead make sure the heading is one level below its parent heading and use CSS to control the size.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Write meaningful heading text that describes the content below the heading.</li>
+        <li>Markup heading text as heading elements (H1-H6).</li>
+        <li>Markup headings as one level below their parent/preceding heading. </li>
+        <li>Use CSS to style headings to make them large and bold or small as needed for the design.</li>
+        <li>Start the main content area with a meaningful H1 heading that matches with the page title.</li>
     </ul>
     <details>
         <summary>Good Content Example</summary>
@@ -61,7 +76,11 @@
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't write generic heading text that is not specifically describing the content below the heading.</li>
+        <li>Don't code heading text using only large, bold CSS or strong tags without using heading tags.</li>
+        <li>Don't skip heading levels, i.e. don't use H1 > H3.</li>
+        <li>Don't choose heading level based on size of heading, instead use CSS to control size.</li>
+        <li>Don't create pages that are missing a meaningful H1 heading.</li>
     </ul>
     <details>
         <summary>Bad Content Example</summary>
@@ -136,8 +155,8 @@
 <p>n/a (Don't use ARIA for headings!)</p>
 <h2>WCAG Success Criteria</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">1.3.1: Info and Relationships</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels">2.4.6: Headings and Labels</a></li>
 </ul>
 <h2>Success Techniques for WCAG</h2>
 <ul>
