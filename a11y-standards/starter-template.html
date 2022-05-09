@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Titles - Structure & Relationships - Open Accessibility Standards</title>
+<title>Starter Template - Open Accessibility Standards</title>
 <link href="/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<a href="../index.html" aria-label="Back to Standards">&lt; Back to Standards</a>
-<h1>Page Titles</h1>
+<a href="/a11y-standards/index.html" aria-label="Back to Standards">&lt; Back to Standards</a>
+<h1>Starter Template</h1>
 <figure>
     <img src="/a11y-standards/structure/headings-example.png" alt="Example showing heading level tags properly marking up heading text.">
     <figcaption>Heading levels displayed by the a11yTools accessibility testing tool.</figcaption>
 </figure>
-<p>Page Titles are.</p>
+<p>Headings are used to give titles to sections and subsections of pages. Usually headings are visually styled to be large and bold text compared to the text below the heading.</p>
 <h2>Impacted Users</h2>
 <p>Screen reader users need meaningful heading text and proper heading structure to understand the organization of the page and navigate to the content they want to read.</p>
 <p>Users with cognitive disabilities need good heading structure and useful heading text to improve the readability and usability of the page.</p>
@@ -21,132 +21,212 @@
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Annotate your designs to identify heading text and heading level.</li>
+        <li>Annotate headings as one level below their parent heading.</li>
     </ul>
     <details>
         <summary>Good Design Example</summary>
+        <p>Screenshot from the figma example.</p>
     </details>
 </div>
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't create designs without annotating the heading text and heading level.</li>
+        <li>Don't design headings that skip levels, i.e. don't use H1 > H3.</li>
     </ul>
     <details>
         <summary>Bad Design Example</summary>
+        <p>Screenshot from the figma example.</p>
     </details>
 </div>
 <div class="clearboth"></div>
 <h4>Live Figma Example</h4>
+<p>Link to Figma example</p>
 <h4>Testing for Accessibility</h4>
 <details>
     <summary>Design Review</summary>
     <ol>
         <li>Look for heading and subheading text in the design.</li>
+        <li>Make sure heading and subheading text is annotated in the design.</li>
+        <li>Make sure headings do not skip levels.</li>
+        <li>If heading and subheading text is properly annotated in the design then it passes. ✅</li>
+        <li>If heading or subheading text is not annotated in the design then it fails. ❌</li>
+        <li>If headings do not skip levels then it passes. ✅</li>
+        <li>If headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <h2>Content Designers</h2>
 <h3>Write meaningful heading text and markup as heading elements one level below their parent heading.</h3>
-<p>Rule explanation.</p>
+<p>Heading text must be meaningful and describe the content below the heading. Don't choose heading levels based on the size of the heading, instead make sure the heading is one level below its parent heading and use CSS to control the size.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Write meaningful heading text that describes the content below the heading.</li>
+        <li>Markup heading text as heading elements (H1-H6).</li>
+        <li>Markup headings as one level below their parent/preceding heading. </li>
+        <li>Use CSS to style headings to make them large and bold or small as needed for the design.</li>
+        <li>Start the main content area with a meaningful H1 heading describing the page.</li>
     </ul>
     <details>
         <summary>Good Content Example</summary>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="LYQpLzN" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/LYQpLzN">
+            Heading Structure - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
     <h4>Live Good Content Example</h4>
+    <a href="https://codepen.io/pauljadam/pen/LYQpLzN">Heading Structure - Good Example</a>
 </div>
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't write generic heading text that is not specifically describing the content below the heading.</li>
+        <li>Don't code heading text using only large, bold CSS or strong tags without using heading tags.</li>
+        <li>Don't skip heading levels, i.e. don't use H1 > H3.</li>
+        <li>Don't choose heading level based on size of heading, instead use CSS to control size.</li>
+        <li>Don't create pages that are missing a meaningful H1 heading describing the page.</li>
     </ul>
     <details>
-        <summary>Bad Content Example</summary>
+        <summary>Bad Content Examples</summary>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxYVgqB" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/xxYVgqB">
+            Heading Structure - Bad Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOZqypx" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/jOZqypx">
+            Untitled</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
-    <h4>Live Bad Content Example</h4>
+    <h4>Live Bad Content Examples</h4>
+    <ul>
+        <li><a href="https://codepen.io/pauljadam/pen/xxYVgqB">Heading Structure - Bad Example</a></li>
+        <li><a href="https://codepen.io/pauljadam/pen/jOZqypx">Heading Markup - Bad Example</a></li>
+    </ul>
+    
 </div>
 <div class="clearboth"></div>
 <h4>Testing for Accessibility</h4>
 <details>
     <summary>Using Web Inspector</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Right Click > Inspect heading and subheading text on the page.</li>
+        <li>Make sure heading text describes the content below the heading.</li>
+        <li>Make sure headings are coded one level below their parent/preceding heading.</li>
+        <li>If heading text describes the content below the heading and headings do not skip levels then it passes. ✅</li>
+        <li>If heading text does not describe the content below the heading or if headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <details>
     <summary>Using Screen Reader</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Use the screen reader to navigate to each heading on the page or display a list of headings.</li>
+        <li>Make sure heading text describes the content below the heading.</li>
+        <li>Make sure headings are coded one level below their parent/preceding heading.</li>
+        <li>If heading text describes the content below the heading and headings do not skip levels then it passes. ✅</li>
+        <li>If heading text does not describe the content below the heading or if headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <h2>Developers</h2>
-<h3>Code heading text as native heading elements (H1-6) and properly nest headings without skipping levels.</h3>
-<p>Rule explanation.</p>
+<h3>Code heading text as native heading elements (H1-H6) and properly nest headings without skipping levels.</h3>
+<p>Don't use CSS to style heading text without using native heading tags. Don't use ARIA for headings unless there's absolutely no other option. Make sure your headings never skip levels, i.e. don't use H1 > H3.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Markup headings as native H1-H6 elements.</li>
+        <li>Use CSS to style headings to fit the design.</li>
+        <li>Make sure headings don't skip levels.</li>
     </ul>
     <details>
         <summary>Good Code Example</summary>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="BaYKpQQ" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/BaYKpQQ">
+            Heading Levels - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
-    <h4>Live Bad Code Example</h4>
+    <h4>Live Good Code Example</h4>
+    <p><a href="https://codepen.io/pauljadam/pen/BaYKpQQ">Heading Levels - Good Example</a></p>
 </div>
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't use CSS only to style text to look like a heading.</li>
+        <li>Don't use ARIA role="heading" or aria-level to create headings.</li>
+        <li>Don't skip heading levels, i.e. don't use H1 > H3.</li>
     </ul>
     <details>
         <summary>Bad Code Example</summary>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxYVgLe" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/xxYVgLe">
+            Heading Levels - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
-    <h4>Live Good Code Example</h4>
+    <h4>Live Bad Code Example</h4>
+    <p><a href="https://codepen.io/pauljadam/pen/xxYVgLe">Heading Levels - Bad Example</a></p>
 </div>
 <div class="clearboth"></div>
 <h4>Testing for Accessibility</h4>
 <details>
     <summary>Using Web Inspector</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Right Click > Inspect heading and subheading text on the page.</li>
+        <li>Make sure headings are coded as native heading elements (H1-H6).</li>
+        <li>Make sure headings do not skip levels.</li>
+        <li>If headings are coded as native heading elements (H1-H6) then it passes. ✅</li>
+        <li>If headings are not coded as native heading elements (H1-H6) then it fails. ❌</li>
+        <li>If headings do not skip levels then it passes. ✅</li>
+        <li>If headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <details>
     <summary>Using Screen Reader</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Use the screen reader to navigate to each heading on the page or display a list of headings.</li>
+        <li>Make sure heading text is focused during heading navigation or displayed in the headings list.</li>
+        <li>Make sure headings are coded one level below their parent/preceding heading.</li>
+        <li>If heading text is focused during heading navigation, displayed in the headings list, and headings do not skip levels then it passes. ✅</li>
+        <li>If heading text is not focused during heading navigation, not displayed in the headings list, or if headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <h2>Disabilities Affected</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
-    <li>Cognitive</li>
+    <li><a href="https://webaim.org/articles/visual/blind">Blind</a></li>
+    <li><a href="https://webaim.org/articles/visual/lowvision">Low Vision</a></li>
+    <li><a href="https://webaim.org/articles/cognitive/">Cognitive</a></li>
 </ul>
 <h2>Assistive Technologies Applicable</h2>
 <ul>
-    <li>Screen Reader</li>
+    <li><a href="https://webaim.org/articles/visual/blind#screenreaders">Screen Reader</a></li>
 </ul>
 <h2>Design System Documentation</h2>
 <p><a href="https://www.duetds.com/components/heading/#accessibility">Heading | Duet Design System</a></p>
 <h2>ARIA Design Patterns</h2>
-<p>n/a</p>
+<p>N/A (Don't use ARIA for headings!)</p>
 <h2>WCAG Success Criteria</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">1.3.1: Info and Relationships</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels">2.4.6: Headings and Labels</a></li>
 </ul>
 <h2>Success Techniques for WCAG</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H42">Using h1-h6 to identify headings</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H69">Providing heading elements at the beginning of each section of content</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G130">Providing descriptive headings</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G141">Organizing a page using headings</a></li>
 </ul>
 <h2>Failure Techniques for WCAG</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
-</ul>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F43">Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content</a></li>
+    </ul>
 </body>
 </html>
