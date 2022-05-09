@@ -134,12 +134,14 @@
     </ol>
 </details>
 <h2>Developers</h2>
-<h3>Code heading text as native heading elements (H1-6) and properly nest headings without skipping levels.</h3>
-<p>Rule explanation.</p>
+<h3>Code heading text as native heading elements (H1-H6) and properly nest headings without skipping levels.</h3>
+<p>Don't use CSS to style heading text without using native heading tags. Don't use ARIA for headings unless there's absolutely no other option. Make sure your headings never skip levels, i.e. don't use H1 > H3.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Markup headings as native H1-H6 elements.</li>
+        <li>Use CSS to style headings to fit the design.</li>
+        <li>Make sure headings don't skip levels.</li>
     </ul>
     <details>
         <summary>Good Code Example</summary>
@@ -156,7 +158,9 @@
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't use CSS only to style text to look like a heading.</li>
+        <li>Don't use ARIA role="heading" or aria-level to create headings.</li>
+        <li>Don't skip heading levels, i.e. don't use H1 > H3.</li>
     </ul>
     <details>
         <summary>Bad Code Example</summary>
@@ -175,24 +179,34 @@
 <details>
     <summary>Using Web Inspector</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Right Click > Inspect heading and subheading text on the page.</li>
+        <li>Make sure headings are coded as native heading elements (H1-H6).</li>
+        <li>Make sure headings do not skip levels.</li>
+        <li>If headings are coded as native heading elements (H1-H6) then it passes. ✅</li>
+        <li>If headings are not coded as native heading elements (H1-H6) then it fails. ❌</li>
+        <li>If headings do not skip levels then it passes. ✅</li>
+        <li>If headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <details>
     <summary>Using Screen Reader</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Use the screen reader to navigate to each heading on the page or display a list of headings.</li>
+        <li>Make sure heading text is focused during heading navigation or displayed in the headings list.</li>
+        <li>Make sure headings are coded one level below their parent/preceding heading.</li>
+        <li>If heading text is focused during heading navigation, displayed in the headings list, and headings do not skip levels then it passes. ✅</li>
+        <li>If heading text is not focused during heading navigation, not displayed in the headings list, or if headings skip levels then it fails. ❌</li>
     </ol>
 </details>
 <h2>Disabilities Affected</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
-    <li>Cognitive</li>
+    <li><a href="https://webaim.org/articles/visual/blind">Blind</a></li>
+    <li><a href="https://webaim.org/articles/visual/lowvision">Low Vision</a></li>
+    <li><a href="https://webaim.org/articles/cognitive/">Cognitive</a></li>
 </ul>
 <h2>Assistive Technologies Applicable</h2>
 <ul>
-    <li>Screen Reader</li>
+    <li><a href="https://webaim.org/articles/visual/blind#screenreaders">Screen Reader</a></li>
 </ul>
 <h2>Design System Documentation</h2>
 <p><a href="https://www.duetds.com/components/heading/#accessibility">Heading | Duet Design System</a></p>
