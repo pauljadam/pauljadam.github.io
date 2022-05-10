@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Starter Template - Open Accessibility Standards</title>
+<title>Accordions - Custom Controls - Open Accessibility Standards</title>
 <link href="/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <a href="/a11y-standards/index.html" aria-label="Back to Standards">&lt; Back to Standards</a>
-<h1>Starter Template</h1>
+<h1>Accordions</h1>
 <figure>
-    <img src="/a11y-standards/structure/image.png" alt="Example showing heading level tags properly marking up heading text.">
-    <figcaption>Image/Screenshot explaining visually what type of component this page is covering.</figcaption>
+    <img src="/a11y-standards/custom/accordion.png" alt="VoiceOver reading 'Click to open details, expanded, button'.">
+    <figcaption>VoiceOver shown focused on an accordion with the expanded state and button role spoken.</figcaption>
 </figure>
-<p>Definition / explanation of what this component is/how it works.</p>
+<p>Accordions are disclosure controls used to expand and collapse (show and hide) content.</p>
 <h2>Impacted Users</h2>
-<p>Screen reader users need ....</p>
-<p>Users with cognitive disabilities need ...</p>
-<p>Keyboard users need ... etc.</p>
+<p>Screen reader users need to hear the expanded or collapsed state of the accordion so they know when it's opened or closed.</p>
+<p>Users with cognitive disabilities need the ability to hide content that may be cluttering the page.</p>
+<p>Keyboard users need accordions to be keyboard focusable and operable to expand and collapse.</p>
 <h2>Designers</h2>
-<h3>Rule that designers must follow.</h3>
-<p>Rule explanation text here. Rules for designers usually involve annotating the design and conveying accessibility properties to developers to make sure it's coded properly for accessibility.</p>
+<h3>Annotate accordions in your designs with an expanded and collapsed state or using details summary elements.</h3>
+<p>Accordions need to be annotated with an expanded and collapsed state, e.g. adding aria-expanded=true/false or using details summary elements.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Annotate your designs to ....</li>
-        <li>Annotate ...</li>
+        <li>Annotate accordions in your design using aria-expanded or details summary elements.</li>
     </ul>
     <details>
         <summary>Good Design Example</summary>
@@ -33,8 +32,7 @@
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't create designs without ...</li>
-        <li>Don't design ...</li>
+        <li>Don't design accordions without annotating an aria-expanded state or using details summary elements.</li>
     </ul>
     <details>
         <summary>Bad Design Example</summary>
@@ -58,13 +56,13 @@
     </ol>
 </details>
 <h2>Content Designers</h2>
-<h3>Rule text that content designers must follow.</h3>
-<p>Explanation of rule.</p>
+<h3>Code accordions as details summary elements with meaningful details text.</h3>
+<p>Use details summary elements to create accordions because that control is keyboard and screen reader accessible by default.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Write ...</li>
-        <li>Markup ...</li>
+        <li>Code accordion controls as details summary elements.</li>
+        <li>Write meaningful details text for the accordion button.</li>
     </ul>
     <details>
         <summary>Good Content Example</summary>
@@ -81,8 +79,8 @@
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't write ...</li>
-        <li>Don't code ...</li>
+        <li>Don't code accordions without using details summary elements.</li>
+        <li>Don't create accordions without writing meaningful details text for the accordion button.</li>
     </ul>
     <details>
         <summary>Bad Content Examples</summary>
@@ -196,32 +194,30 @@
 <h2>Disabilities Affected</h2>
 <ul>
     <li><a href="https://webaim.org/articles/visual/blind">Blind</a></li>
-    <li><a href="https://webaim.org/articles/visual/lowvision">Low Vision</a></li>
-    <li><a href="https://webaim.org/articles/cognitive/">Cognitive</a></li>
 </ul>
 <h2>Assistive Technologies Applicable</h2>
 <ul>
     <li><a href="https://webaim.org/articles/visual/blind#screenreaders">Screen Reader</a></li>
 </ul>
 <h2>Design System Documentation</h2>
-<p><a href="https://www.duetds.com/components/heading/#accessibility">Heading | Duet Design System</a></p>
+<p><a href="https://www.duetds.com/components/collapsible/#accessibility">Collapsible | Duet Design System</a></p>
 <h2>ARIA Design Patterns</h2>
-<p>N/A (Don't use ARIA for headings!)</p>
+<ul>
+    <li><a href="https://w3c.github.io/aria-practices/#accordion">Accordion - WAI-ARIA Authoring Practices</a></li>
+    <li><a href="https://w3c.github.io/aria-practices/examples/accordion/accordion.html">Accordion Example</a></li>
+</ul>
 <h2>WCAG Success Criteria</h2>
 <ul>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">1.3.1: Info and Relationships</a></li>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels">2.4.6: Headings and Labels</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value">4.1.2: Name, Role, Value</a></li>
 </ul>
 <h2>Success Techniques for WCAG</h2>
 <ul>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H42">Using h1-h6 to identify headings</a></li>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H69">Providing heading elements at the beginning of each section of content</a></li>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G130">Providing descriptive headings</a></li>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G141">Organizing a page using headings</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5">Using WAI-ARIA state and property attributes to expose the state of a user interface component</a></li>
 </ul>
 <h2>Failure Techniques for WCAG</h2>
 <ul>
-    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F43">Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F59">Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML without providing a role for the control</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F15">Failure of Success Criterion 4.1.2 due to implementing custom controls that do not use an accessibility API for the technology, or do so incompletely</a></li>
     </ul>
 </body>
 </html>
