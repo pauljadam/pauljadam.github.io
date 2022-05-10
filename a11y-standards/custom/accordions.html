@@ -66,43 +66,34 @@
     </ul>
     <details>
         <summary>Good Content Example</summary>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="LYQpLzN" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/LYQpLzN">
-            Heading Structure - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJQXMvZ" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/OJQXMvZ">
+            Accordion - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-    </details>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>    </details>
     <h4>Live Good Content Example</h4>
-    <a href="https://codepen.io/pauljadam/pen/LYQpLzN">Heading Structure - Good Example</a>
+    <a href="https://codepen.io/pauljadam/pen/OJQXMvZ">Accordion - Good Example</a>
 </div>
 <div class="dodont">
-    <h4 class="dont">❌ Don't</h4>
-    <ul>
-        <li>Don't code accordions without using details summary elements.</li>
-        <li>Don't create accordions without writing meaningful details text for the accordion button.</li>
-    </ul>
-    <details>
-        <summary>Bad Content Examples</summary>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxYVgqB" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/xxYVgqB">
-            Heading Structure - Bad Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-          <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOZqypx" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/jOZqypx">
-            Untitled</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
-            on <a href="https://codepen.io">CodePen</a>.</span>
-          </p>
-          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-    </details>
-    <h4>Live Bad Content Examples</h4>
-    <ul>
-        <li><a href="https://codepen.io/pauljadam/pen/xxYVgqB">Heading Structure - Bad Example</a></li>
-        <li><a href="https://codepen.io/pauljadam/pen/jOZqypx">Heading Markup - Bad Example</a></li>
-    </ul>
-    
+<h4 class="dont">❌ Don't</h4>
+<ul>
+    <li>Don't code accordions without using details summary elements.</li>
+    <li>Don't create accordions without writing meaningful details text for the accordion button.</li>
+</ul>
+<details>
+    <summary>Bad Content Examples</summary>
+    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="XWZKXYJ" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/pauljadam/pen/XWZKXYJ">
+        Accordion - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</details>
+<h4>Live Bad Content Example</h4>
+<ul>
+    <li><a href="https://codepen.io/pauljadam/pen/XWZKXYJ">Accordion - Bad Example</a></li>
+</ul>
 </div>
 <div class="clearboth"></div>
 <h4>Testing for Accessibility</h4>
@@ -127,8 +118,8 @@
     </ol>
 </details>
 <h2>Developers</h2>
-<h3>Rule text developers must follow.</h3>
-<p>Explanation of rule text.</p>
+<h3>Code accordions as native details summary HTML elements or use aria-expanded on a button if native control can't be used.</h3>
+<p>Native details summary elements are keyboard and screen reader accessible by default. Details summary elements manage the expanded and collapsed state for screen readers without requiring any JavaScript.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
@@ -201,6 +192,8 @@
 </ul>
 <h2>Design System Documentation</h2>
 <p><a href="https://www.duetds.com/components/collapsible/#accessibility">Collapsible | Duet Design System</a></p>
+<h2>HTML Standard</h2>
+<p><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element">The details element</a></p>
 <h2>ARIA Design Patterns</h2>
 <ul>
     <li><a href="https://w3c.github.io/aria-practices/#accordion">Accordion - WAI-ARIA Authoring Practices</a></li>
