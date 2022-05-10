@@ -8,145 +8,100 @@
 <a href="../index.html" aria-label="Back to Standards">&lt; Back to Standards</a>
 <h1>Page Titles</h1>
 <figure>
-    <img src="/a11y-standards/structure/headings-example.png" alt="Example showing heading level tags properly marking up heading text.">
-    <figcaption>Heading levels displayed by the a11yTools accessibility testing tool.</figcaption>
+    <img src="/a11y-standards/structure/page-title-example.png" alt="Screenshot of a safari browser tab showing the unique portion of the page title and the full title expanded on mouse hover.">
+    <figcaption>Page title shown in Safari browser tab.</figcaption>
 </figure>
-<p>Page Titles are.</p>
+<p>The page title element is displayed in the browser tab. Page titles define the name of the html document.</p>
 <h2>Impacted Users</h2>
-<p>Screen reader users need meaningful heading text and proper heading structure to understand the organization of the page and navigate to the content they want to read.</p>
-<p>Users with cognitive disabilities need good heading structure and useful heading text to improve the readability and usability of the page.</p>
+<p>Screen reader users hear the page title as the first thing spoken when they set focus to a webpage and when switching between browser tabs. Each page title needs to be unique and describe the purpose of the page.</p>
+<p>Low Vision users need to see the unique portion of the page title displayed in their browser tab to confirm they're on the right page.</p>
+<p>Users with cognitive disabilities need unique and specific page titles so they know they're on the correct page.</p>
 <h2>Designers</h2>
-<h3>Identify heading and subheading text as heading elements at the proper level.</h3>
-<p>In your designs make sure to annotate the heading text as heading tags with the proper heading level. The goal is to tell the developers what text is heading text and what the correct heading level should be when coded.</p>
-<div class="dodont">
-    <h4 class="do">✅ Do</h4>
-    <ul>
-        <li>Do this.</li>
-    </ul>
-    <details>
-        <summary>Good Design Example</summary>
-    </details>
-</div>
-<div class="dodont">
-    <h4 class="dont">❌ Don't</h4>
-    <ul>
-        <li>Don't this.</li>
-    </ul>
-    <details>
-        <summary>Bad Design Example</summary>
-    </details>
-</div>
-<div class="clearboth"></div>
-<h4>Live Figma Example</h4>
-<h4>Testing for Accessibility</h4>
-<details>
-    <summary>Design Review</summary>
-    <ol>
-        <li>Look for heading and subheading text in the design.</li>
-    </ol>
-</details>
+<p>Designers have the same accessibility responsibilities as content designers for page titles.</p>
 <h2>Content Designers</h2>
-<h3>Write meaningful heading text and markup as heading elements one level below their parent heading.</h3>
-<p>Rule explanation.</p>
+<h3>Write page titles that are unique and describe the purpose of the page.</h3>
+<p>Each page must have a unique and meaningful title that describes the specific purpose of the page.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Do this.</li>
+        <li>Write page titles that are unique and describe the purpose of the page.</li>
+        <li>Write page titles that are meaningful when listed in the Sitemap.</li>
+        <li>Place the unique portion of the page title in the front so that it's visible in the browser tab.</li>
     </ul>
     <details>
         <summary>Good Content Example</summary>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="WNMwyGN" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/WNMwyGN">
+            Page Title - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
     <h4>Live Good Content Example</h4>
+    <a href="https://codepen.io/pauljadam/pen/WNMwyGN">Page Title - Good Example</a>
 </div>
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't this.</li>
+        <li>Don't write page titles without describing the purpose of the page.</li>
+        <li>Don't write the same page title for multiple pages.</li>
+        <li>Don't write the unique portion of the page title at the end.</li>
     </ul>
     <details>
         <summary>Bad Content Example</summary>
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="MWQyXje" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/MWQyXje">
+            New Page 1</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
     <h4>Live Bad Content Example</h4>
+    <ul>
+        <li><a href="https://codepen.io/pauljadam/pen/MWQyXje">Page Title - Bad Example</a></li>
+    </ul>
+    
 </div>
 <div class="clearboth"></div>
 <h4>Testing for Accessibility</h4>
 <details>
     <summary>Using Web Inspector</summary>
     <ol>
-        <li>Look for heading and subheading text in the design.</li>
-    </ol>
-</details>
-<details>
-    <summary>Using Screen Reader</summary>
-    <ol>
-        <li>Look for heading and subheading text in the design.</li>
+        <li>Right Click > Inspect the page.</li>
+        <li>Make sure the title element inside the head is unique and describes the purpose of the page.</li>
+        <li>If title element is unique and describes the purpose of the page then it passes. ✅</li>
+        <li>If title element is not unique or does not describe the purpose of the page then it fails. ❌</li>
     </ol>
 </details>
 <h2>Developers</h2>
-<h3>Code heading text as native heading elements (H1-6) and properly nest headings without skipping levels.</h3>
-<p>Rule explanation.</p>
-<div class="dodont">
-    <h4 class="do">✅ Do</h4>
-    <ul>
-        <li>Do this.</li>
-    </ul>
-    <details>
-        <summary>Good Code Example</summary>
-    </details>
-    <h4>Live Bad Code Example</h4>
-</div>
-<div class="dodont">
-    <h4 class="dont">❌ Don't</h4>
-    <ul>
-        <li>Don't this.</li>
-    </ul>
-    <details>
-        <summary>Bad Code Example</summary>
-    </details>
-    <h4>Live Good Code Example</h4>
-</div>
-<div class="clearboth"></div>
-<h4>Testing for Accessibility</h4>
-<details>
-    <summary>Using Web Inspector</summary>
-    <ol>
-        <li>Look for heading and subheading text in the design.</li>
-    </ol>
-</details>
-<details>
-    <summary>Using Screen Reader</summary>
-    <ol>
-        <li>Look for heading and subheading text in the design.</li>
-    </ol>
-</details>
+<p>Developers have the same accessibility responsibilities as content designers for page titles.</p>
+<p>⚠️ Developers must also make sure SPAs (Single Page Apps) which dynamically update their content via AJAX also update their page titles. e.g. document.title = "New Title"</p>
 <h2>Disabilities Affected</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
-    <li>Cognitive</li>
+    <li><a href="https://webaim.org/articles/visual/blind">Blind</a></li>
+    <li><a href="https://webaim.org/articles/visual/lowvision">Low Vision</a></li>
+    <li><a href="https://webaim.org/articles/cognitive/">Cognitive</a></li>
 </ul>
 <h2>Assistive Technologies Applicable</h2>
 <ul>
-    <li>Screen Reader</li>
+    <li><a href="https://webaim.org/articles/visual/blind#screenreaders">Screen Reader</a></li>
 </ul>
 <h2>Design System Documentation</h2>
-<p><a href="https://www.duetds.com/components/heading/#accessibility">Heading | Duet Design System</a></p>
+<p>N/A</p>
 <h2>ARIA Design Patterns</h2>
-<p>n/a</p>
+<p>N/A</p>
 <h2>WCAG Success Criteria</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled">2.4.2: Page Titled</a></li>
 </ul>
 <h2>Success Techniques for WCAG</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G88">Providing descriptive titles for Web pages</a></li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H25">Providing a title using the title element</a></li>
 </ul>
 <h2>Failure Techniques for WCAG</h2>
 <ul>
-    <li>Blind</li>
-    <li>Low Vision</li>
-</ul>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F25">Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents</a></li>
+    </ul>
 </body>
 </html>
