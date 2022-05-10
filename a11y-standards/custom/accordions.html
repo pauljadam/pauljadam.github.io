@@ -119,44 +119,43 @@
 </details>
 <h2>Developers</h2>
 <h3>Code accordions as native details summary HTML elements or use aria-expanded on a button if native control can't be used.</h3>
-<p>Native details summary elements are keyboard and screen reader accessible by default. Details summary elements manage the expanded and collapsed state for screen readers without requiring any JavaScript.</p>
+<p>Native details summary elements are keyboard and screen reader accessible by default. Details summary elements manage the expanded and collapsed state for screen readers without requiring any JavaScript. Don't use ARIA to create accessible accordions unless using native HTML details summary elements is not possible.</p>
 <div class="dodont">
     <h4 class="do">✅ Do</h4>
     <ul>
-        <li>Markup ...</li>
-        <li>Use ...</li>
-        <li>Make sure ...</li>
+        <li>Code accordions as native details summary elements.</li>
+        <li>Use aria-expanded on a button if native details summary can't be used.</li>
     </ul>
     <details>
         <summary>Good Code Example</summary>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="BaYKpQQ" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/BaYKpQQ">
-            Heading Levels - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="eYVzZWd" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/eYVzZWd">
+            Custom Accordion - Bad Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
     <h4>Live Good Code Example</h4>
-    <p><a href="https://codepen.io/pauljadam/pen/BaYKpQQ">Heading Levels - Good Example</a></p>
+    <p><a href="https://codepen.io/pauljadam/pen/eYVzZWd">Custom Accordion - Good Example</a></p>
 </div>
 <div class="dodont">
     <h4 class="dont">❌ Don't</h4>
     <ul>
-        <li>Don't use ...</li>
-        <li>Don't use ...</li>
-        <li>Don't ...</li>
+        <li>Don't code accordions out of non-focusable elements like div or span.</li>
+        <li>Don't use ARIA to code accessible accordions unless native details summary elements can't be used.</li>
+        <li>Don't code accordions that are missing an expanded and collapsed state.</li>
     </ul>
     <details>
         <summary>Bad Code Example</summary>
-        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxYVgLe" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/xxYVgLe">
-            Heading Levels - Good Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
+        <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="GRQqZqY" data-editable="true" data-user="pauljadam" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="https://codepen.io/pauljadam/pen/GRQqZqY">
+            Custom Accordion - Bad Example</a> by Paul J. Adam (<a href="https://codepen.io/pauljadam">@pauljadam</a>)
             on <a href="https://codepen.io">CodePen</a>.</span>
           </p>
           <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </details>
     <h4>Live Bad Code Example</h4>
-    <p><a href="https://codepen.io/pauljadam/pen/xxYVgLe">Heading Levels - Bad Example</a></p>
+    <p><a href="https://codepen.io/pauljadam/pen/GRQqZqY">Custom Accordion - Bad Example</a></p>
 </div>
 <div class="clearboth"></div>
 <h4>Testing for Accessibility</h4>
@@ -185,10 +184,12 @@
 <h2>Disabilities Affected</h2>
 <ul>
     <li><a href="https://webaim.org/articles/visual/blind">Blind</a></li>
+    <li><a href="https://webaim.org/articles/motor/">Motor</a></li>
 </ul>
 <h2>Assistive Technologies Applicable</h2>
 <ul>
     <li><a href="https://webaim.org/articles/visual/blind#screenreaders">Screen Reader</a></li>
+    <li><a href="https://webaim.org/techniques/keyboard/">Keyboard</a></li>
 </ul>
 <h2>Design System Documentation</h2>
 <p><a href="https://www.duetds.com/components/collapsible/#accessibility">Collapsible | Duet Design System</a></p>
