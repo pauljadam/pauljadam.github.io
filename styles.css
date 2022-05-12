@@ -84,9 +84,9 @@ code {
 
 :root {
   font-size: clamp(
-    105%,
+    100%,
     calc(100% + 0.5vw),
-    150%
+    100%
   ); /* % ensures browser zoom is supported. */
   font-family: var(--font); /* Use system UI font. */
   line-height: var(--leading); /* Standard leading for good legibility. */
@@ -429,7 +429,6 @@ summary > * {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: 0;
   min-block-size: 100vh;
   min-block-size: 100dvb;
 }
