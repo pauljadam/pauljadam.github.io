@@ -1,14 +1,490 @@
-body {font-family: sans-serif;}
-img {max-width: 600px; max-height: 1000px;}
-@media only screen and (max-width: 600px) {
-    img {max-width: 100%;}
-}
-figure, figcaption {text-align: center;}
-.do {color: green;}
-.dont {color: darkred;}
-.dodont {float:left; width: 50%; }
-@media only screen and (max-width: 600px) {
-    .dodont {min-width: 50%; width: unset;}
+/* ------------------------------------ *\
+   Do's and Dont's
+\* ------------------------------------ */
+
+.do {
+  color: var(--color-success);
 }
 
-.clearboth {clear: both;}
+.dont {
+  color: var(--color-error);
+}
+
+.dodont {
+  min-inline-size: 50%;
+  margin-block-end: var(--spacing-y);
+}
+
+.dodont:last-child {
+  margin-block-end: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .dodont {
+    float: left;
+    inline-size: 50%;
+    padding-block: var(--spacing-y);
+    padding-inline: calc(var(--spacing-x) / 2);
+  }
+}
+
+.clearboth {
+  clear: both;
+}
+
+/* ------------------------------------ *\
+   Tokens
+\* ------------------------------------ */
+
+:root {
+  --golden-ratio: 1.61803398875;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+  --font-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  --color-text: #202020;
+  --color-bg: #f4f4f4;
+  --color-success: green;
+  --color-error: darkred;
+  --gutter: 3ch;
+  --leading: 1.45;
+  --spacing-x: var(--gutter);
+  --spacing-y: calc(var(--leading) * var(--golden-ratio) * 0.8ex);
+  --page-padding-x: calc((100vw - min(66ch, 90vw)) / 2);
+  --border-width: 1px;
+}
+
+/* ------------------------------------ *\
+   Color
+\* ------------------------------------ */
+
+:root {
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+a {
+  color: var(--color-text);
+}
+
+button {
+  color: var(--color-bg);
+  background: var(--color-text);
+}
+
+code {
+  /* Invert the colors on these ones. */
+  color: var(--color-bg);
+  background: var(--color-text);
+}
+
+/* ------------------------------------ *\
+   Typography
+\* ------------------------------------ */
+
+:root {
+  font-size: clamp(
+    105%,
+    calc(100% + 0.5vw),
+    150%
+  ); /* % ensures browser zoom is supported. */
+  font-family: var(--font); /* Use system UI font. */
+  line-height: var(--leading); /* Standard leading for good legibility. */
+}
+
+a {
+  word-break: break-word;
+  text-decoration: underline;
+  text-decoration-thickness: var(--border-width);
+  text-underline-offset: calc(var(--border-width) * 2);
+}
+
+a:hover {
+  text-decoration-thickness: calc(var(--border-width) * 3);
+}
+
+pre,
+code,
+kbd,
+dl,
+figcaption,
+abbr,
+table {
+  font-family: var(
+    --font-monospace
+  ); /* Differentiate preformatted, code, description, and table text from body text. */
+}
+
+pre,
+code,
+kbd,
+dl,
+small,
+figcaption,
+table {
+  font-size: 0.8em; /* Make monospace and small text smaller than body text. */
+}
+
+pre code {
+  display: block; /* Define block code. */
+  font-size: 1em; /* Prevent cascading. */
+}
+
+blockquote {
+  font-size: 1.5em;
+}
+
+legend,
+strong,
+b,
+th {
+  font-weight: 700; /* Make non-heading emphasized text less bold than heading text. */
+}
+
+button,
+select,
+input,
+textarea,
+a {
+  font-family: inherit; /* Reset font. */
+  font-size: inherit; /* Reset font. */
+  font-weight: 500; /* Emphasize interactive and pullquote text more than body text. */
+}
+
+caption {
+  text-align: start;
+}
+
+abbr {
+  text-decoration: underline;
+  text-decoration-style: dotted; /* Differentiate abbreviaions from links. */
+  text-underline-offset: calc(var(--border-width) * 2);
+}
+
+button,
+label,
+summary {
+  cursor: pointer;
+}
+
+blockquote q:before {
+  position: absolute;
+  transform: translateX(-100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+/* ------------------------------------ *\
+   Spacing
+\* ------------------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-end: calc(var(--spacing-y) / 5);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+li,
+details {
+  margin-block-start: 0;
+}
+
+p,
+figure,
+form,
+fieldset,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+details {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: var(--spacing-y);
+}
+
+p:last-child,
+figure:last-child,
+form:last-child,
+fieldset:last-child,
+pre:last-child,
+blockquote:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+details:last-child {
+  margin-block-end: 0;
+}
+
+ul,
+ol {
+  margin-inline-start: var(
+    --spacing-x
+  ); /* Unify indent for all lists, and account for at least 2-digit number counter plus a dot for ordered list. */
+  padding: 0; /* Remove extra padding. */
+}
+
+li > ul,
+li > ol {
+  margin-block-start: calc(var(--spacing-y) / 5);
+}
+
+li + li {
+  margin-block-start: calc(var(--spacing-y) / 5);
+}
+
+blockquote p {
+  margin-block-end: calc(var(--spacing-y) / 2);
+}
+
+input,
+textarea,
+select,
+button,
+caption,
+figcaption,
+dd,
+pre code,
+th,
+td {
+  /* Unify inset spacing on bordered elements. */
+  padding-block: calc(var(--spacing-y) / 6);
+  padding-inline: calc(var(--spacing-x) / 3);
+}
+
+code,
+kbd {
+  padding-block: 0.25ex;
+  padding-inline: 0.5ch;
+}
+
+figure,
+pre {
+  padding-block-start: calc(
+    var(--spacing-y) / 2.5
+  ); /* Line up top of images/codeblocks with text in an adjacent. */
+}
+
+/* ------------------------------------ *\
+   General
+\* ------------------------------------ */
+
+*,
+*:before,
+*:after {
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
+input,
+fieldset,
+textarea,
+select,
+button,
+kbd,
+dt,
+dd,
+table,
+th,
+td {
+  /* Unify border styles. */
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: var(--color-text);
+}
+
+input,
+fieldset,
+textarea,
+select,
+button,
+kbd {
+  /* Unify interactive elements border radius. */
+  border-radius: 4px;
+}
+
+*:focus {
+  outline: calc(var(--border-width) * 2) dashed var(--color-text);
+  outline-offset: var(--border-width);
+}
+
+pre {
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: break-word;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: calc(var(--spacing-x) / 2);
+  row-gap: calc(var(--spacing-y) / 2);
+  align-items: baseline;
+  overflow-x: auto;
+}
+
+dt {
+  border-color: transparent;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: calc(var(--border-width) * 2);
+}
+
+dd {
+  margin-inline-start: 0;
+}
+
+label input,
+label select,
+label textarea {
+  inline-size: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  inline-size: 1.5ex;
+  block-size: 1.5ex;
+  vertical-align: baseline;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+hr {
+  block-size: 0;
+  margin-block-start: 4ex;
+  margin-block-end: 4ex;
+  border: 0;
+  border-top: 1px dashed var(--color-text);
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+figure {
+  inline-size: 100%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  body > header figure img {
+    max-inline-size: 27rem;
+  }
+}
+
+table {
+  border-spacing: 0;
+  caption-side: bottom;
+}
+
+details[open] summary {
+  margin-block-end: calc(var(--spacing-y) / 4);
+}
+
+summary > * {
+  display: inline;
+  vertical-align: middle;
+}
+
+/* ------------------------------------ *\
+   Page Layout
+\* ------------------------------------ */
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  min-block-size: 100vh;
+  min-block-size: 100dvb;
+}
+
+body > * {
+  inline-size: 100vw;
+}
+
+main {
+  padding-block: clamp(
+    calc(var(--spacing-y) * 1),
+    10vw,
+    calc(var(--spacing-y) * 2)
+  );
+  padding-inline: var(--page-padding-x);
+}
+
+body > header {
+  padding-block: clamp(
+      calc(var(--spacing-y) * 2),
+      10vw,
+      calc(var(--spacing-y) * 6)
+    )
+    clamp(calc(var(--spacing-y) * 1), 10vw, calc(var(--spacing-y) * 2));
+  padding-inline: var(--page-padding-x);
+  border-block-end: 1px solid;
+}
+
+body > footer {
+  padding-block: clamp(
+      calc(var(--spacing-y) * 1),
+      10vw,
+      calc(var(--spacing-y) * 2)
+    )
+    clamp(calc(var(--spacing-y) * 2), 10vw, calc(var(--spacing-y) * 6));
+  padding-inline: var(--page-padding-x);
+  border-block-start: 1px solid;
+}
+
+/* ------------------------------------ *\
+   Dark Mode Add-on
+\* ------------------------------------ */
+
+/**
+ * 1. Set the regular light theme colors (inherited from HTML, this assumes the default is light).
+ * 2. Invert the light theme colors.
+ * 3. In-invert raster images and embeds. (>.<)
+ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f4f4f4;
+    --color-bg: #101010;
+    --color-success: lightgreen;
+    --color-error: red;
+    color-scheme: dark;
+  }
+}
