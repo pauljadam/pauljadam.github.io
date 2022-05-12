@@ -83,11 +83,6 @@ code {
 \* ------------------------------------ */
 
 :root {
-  font-size: clamp(
-    100%,
-    calc(100% + 0.5vw),
-    100%
-  ); /* % ensures browser zoom is supported. */
   font-family: var(--font); /* Use system UI font. */
   line-height: var(--leading); /* Standard leading for good legibility. */
 }
@@ -388,7 +383,7 @@ hr {
   margin-block-start: 4ex;
   margin-block-end: 4ex;
   border: 0;
-  border-top: 1px dashed var(--color-text);
+  border-block-start: 1px dashed var(--color-text);
 }
 
 img {
@@ -400,12 +395,6 @@ figure {
   inline-size: 100%;
   overflow-x: auto;
   text-align: center;
-}
-
-@media only screen and (min-width: 600px) {
-  body > header figure img {
-    max-inline-size: 27rem;
-  }
 }
 
 table {
@@ -431,9 +420,12 @@ body {
   grid-template-rows: auto 1fr auto;
   min-block-size: 100vh;
   min-block-size: 100dvb;
+  margin: 0;
 }
 
-body > * {
+main,
+body > header,
+body > footer {
   inline-size: 100vw;
 }
 
